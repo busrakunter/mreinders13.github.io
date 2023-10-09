@@ -1,7 +1,366 @@
-body {
-  background-color: #000000; 
-  color: #ffffff; 
-  width: 100vw; 
-  height: 100vh; 
-  text-align: center;
+/* DEFAULT */
+.section-ctr {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    font-family: Montserrat, sans-serif;
+}
+
+.content-ctr {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.content-header {
+    font-size: 6vh;
+    line-height: 7vh;
+    font-weight: 700;
+    padding: 0 2vw;
+}
+
+.content-ctr p {
+    margin: 0;
+    font-size: 3vh;
+    line-height: 4vh;
+    padding: 5vh 5vw 10vh;
+}
+
+.content-ctr a {
+    color: #fff;
+    background-color: #000;
+    font-size: 2.5vh;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 2.5vh 5vw;
+    border-radius: 50vh;
+    text-decoration: none;
+    opacity: .8;
+}
+
+.content-ctr a:hover {
+    opacity: 1;
+}
+
+/* DEFAULT Background and Section Settings */
+.section-full._1 {
+    position: static;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    background-color: hsla(0, 0%, 61.2%, 0.22);
+    background-image: url('/images/MR-Header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#main-h1 {
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+
+#main-h1 a {
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+#main-h1 a:hover {
+    font-weight: bold;
+}
+
+.big-text-div-2 {
+    margin: 0 15%;
+}
+
+.big-text-2 {
+    line-height: 60px;
+}
+
+#web-hero {
+    background: url("/images/guitar-picks.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+#web-hero p {
+    color: #fff;
+}
+
+#ios-hero {
+    background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("/images/ios-back.jpeg");
+    color: #5c5c5c;
+}
+
+#ios-hero p {
+    color: #5c5c5c;
+}
+
+#ios-hero a {
+    background: #5c5c5c;
+}
+
+#ios-hero a:hover {
+    background: #535353;
+}
+
+#shopify-hero {
+    background: url("/images/slate.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+#shopify-hero p {
+    color: #fff;
+}
+
+#shopify-hero a {
+    background-color: #95c049;
+}
+
+#shopify-hero a:hover {
+    background-color: #608F3E;
+}
+
+/* PORTFOLIO */
+#qm-portfolio-item {
+    background-image: url("/images/qm-screen.png");
+    background-size: cover;
+}
+
+#ea-portfolio-item {
+    background-image: url("/images/ea-screen.png");
+    background-size: cover;
+}
+
+#indevidual-portfolio-item {
+    background-image: url("/images/indevidual-screen.png");
+    background-size: cover;
+}
+
+/* ABOUT */
+#about-view h1 {
+    padding: 5% 0;
+}
+
+#profile-photo {
+    border-radius: 50%;
+    max-width: 300px;
+}
+
+#about-me {
+    font-family: 'Montserrat';
+    font-size: 25px;
+    line-height: 40px;
+    color: #000;
+    padding-bottom: 5%;
+}
+
+/* FOOTER */
+.footer {
+    padding-bottom: 25px;
+}
+
+#footer-quote, #footer-logos {
+    background-color: #000;
+    margin: 0;
+    padding: 0 10%;
+    text-align: center;
+}
+
+#footer-quote {
+    padding: 5% 10% 0 10%;
+}
+
+#footer-logos img {
+    width: 200px;
+    padding: 25px;
+}
+
+/* ------------------------- Responsive ------------------------- */
+
+
+/* min width 500 */
+@media only screen and (min-width: 400px) {
+    /*body {
+        background: orange;
+        opacity: .25;
+    }*/
+
+    #main-quote {
+        font-size: 5vh;
+        line-height: 5vh;
+    }
+
+
+}
+
+/* min width 767 */
+@media only screen and (min-width: 767px) {
+    /*body {
+        background: brown;
+        opacity: .25;
+    }*/
+
+    #main-quote {
+        font-size: 56px;
+        line-height: 60px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #main-quote {
+        font-size: 72px;
+        line-height: 76px;
+    }
+}
+
+/* min width 1200 */
+@media only screen and (min-width : 1200px) {
+    /*body {
+        background: #fff;
+        opacity: .25;
+    }*/
+    
+    .content-header {
+        font-size: 10vh;
+    }
+    .content-ctr p {
+        padding: 8vh 20vw;
+        font-size: 4vh;
+        line-height: 5vh;
+    }
+    .content-ctr a {
+        font-size: 4vh;
+    }    
+}
+
+
+/* ------------------------- MOBILE ------------------------- */
+@media only screen and (min-device-width : 300px) and 
+(max-device-width : 767px) and (orientation : portrait) {
+    /*body {
+        background: #c04981;
+        opacity: .5;
+    }*/
+
+    #main-quote { display: none; }
+
+    #main-textbox { padding: 0;}
+
+    .section-ctr {
+        background-attachment: scroll;
+    }
+
+    #web-hero.section-ctr, #shopify-hero.section-ctr {
+        background-size: cover;
+        background-attachment: scroll;
+        background-position-x: center;
+    }
+
+    #web-hero.section-ctr {
+        background-position-x: 48%;
+        background-position-y: top;
+    }
+
+    .content-ctr p {
+        font-size: 3.5vh;
+        line-height: 4vh;
+    }
+
+}
+
+@media only screen and (min-device-width : 300px) and 
+(max-device-width : 920px) and (orientation : landscape) {
+    /*body {
+        background: #8649c0;
+        opacity: .5;
+    }*/
+
+    #main-textbox {
+        padding-top: 0px;
+    }
+
+
+    .hero-text {
+        top: -50px;
+    }
+
+    .content-header {
+        font-size: 6vw;
+    }
+
+    .content-ctr p {
+        font-size: 3vw;
+        line-height: 3.5vw;
+        padding: 10vh 2.5vw;
+    }
+
+    .content-ctr a {
+        font-size: 2.5vw;
+        padding: 3vh 5vw;
+    }
+
+    #web-hero.section-ctr, #shopify-hero.section-ctr {
+        background-size: cover;
+        background-attachment: scroll;
+        background-position-x: center;
+    }
+
+    #web-hero.section-ctr {
+        background-position-x: 48%;
+        background-position-y: top;
+    }
+
+
+}
+
+/* ------------------------- TABLET ------------------------- */
+
+@media only screen and (min-device-width : 768px) and 
+(max-device-width : 1366px) and (orientation : portrait) {
+    /*body {
+        background: #49a8c0;
+        opacity: .5;
+    }*/
+    .content-header {
+        font-size: 6vh;
+    }
+
+    .content-ctr p {
+        font-size: 4vh;
+        line-height: 4.5vh;
+    }
+
+    .content-ctr a {
+        font-size: 3.5vh;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and 
+(max-device-width : 1366px) and (min-height : 768px) 
+and (orientation : landscape) {
+    /*body {
+        background: #95c049;
+        opacity: .2;
+    }*/
+    .content-header {
+        font-size: 8vh;
+    }
+
+    .content-ctr p {
+        font-size: 5vh;
+        line-height: 6vh;
+    }
+
+    .content-ctr a {
+        font-size: 4vh;
+    }
 }

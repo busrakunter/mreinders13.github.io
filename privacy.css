@@ -1,0 +1,44 @@
+#privacy-ctr {
+    max-width: 100vw;
+    padding: 25px 10%;
+}
+
+h1 {
+    margin: 100px 0 50px 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4vh;
+    font-family: 'Montserrat';
+    margin: 50px 0;
+    color: #000;
+}
+
+h3 {
+    text-align: justify;
+    color: #000;
+}
+
+h3:hover {
+    color: #000;
+}
+
+p {
+    font-size: 2vh;
+    text-align: justify;
+}
+
+a {
+    color: #707070;
+}
+
+a:hover {
+    color: #000;
+}
+
+@media screen and (max-width: 991px) {
+    h3 {
+        font-size: 2vh;
+    }
+}

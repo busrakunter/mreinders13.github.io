@@ -1,0 +1,26 @@
+.work-hero {
+    height: 0%;
+}
+
+h6 {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    text-align: justify;
+}
+
+.button {
+    background: #007cc7; 
+    color: #fff;
+}
+
+.images-div {
+    background: #f7f7f7;
+    padding: 10%;
+}
+.images-div img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.next-portfolio-item {
+    display: none;
+}
