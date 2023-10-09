@@ -4,6 +4,8 @@ body {
 }
 h1 {
     color: #fff;
+    width: 100vw;
+    text-align: center;
 }
 form {
     display: block;
