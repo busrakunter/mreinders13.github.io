@@ -12,39 +12,41 @@
         body {
             background-color: #12277F;
             color: #fff;
+            text-align: center;
         }
         h1 {
             font-family: 'Bangers';
-            font-size: 150px;
-            padding: 25px;
+            font-size: 10vw;
         }
         #navigation {
             padding: 20px;
+        }
+        button #navigation {
+            color: #12277F;
+        }
+        #email, textarea, #submit {
+            color: #12277F;
+        }
+        #submit {
+            font-family: 'Bangers';
+            font-size: 5vh;
         }
     </style>
 </head>
 <body>
     <h1>Coach's Challenge</h1>
-    <div id="navigation">
-        <button>
-            Help + Support
-        </button>
-        <button>
-            Privacy Policy
-        </button>
-    </div>
     <form action="https://submit-form.com/Y8VTLnWR">
-        <input type="text" id="name" name="name" placeholder="Full Name" required="" /><br>
         <input type="email" id="email" name="email" placeholder="Email Address" required="" /><br>
         <textarea
           id="message"
           name="message"
           placeholder="Message"
           required=""
-        ></textarea><br>
-        <button type="submit">Send</button>
+        ></textarea>
+        <br>
+        <button id="submit" type="submit">Submit</button>
     </form>
-    <hr>
+
     <div style="display: none;">
         <h2>Privacy Policy</h2>
             <h3>COLLECTION OF YOUR INFORMATION</h3>

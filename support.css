@@ -1,12 +1,36 @@
 body {
-    background-color: #000;
     align-content: center;
 }
+
 h1 {
-    color: #fff;
-    width: 100vw;
     text-align: center;
+    width: 100vw;
 }
+
 form {
     display: block;
+}
+
+#email, #submit {
+    width: 60vw;
+}
+
+#email { 
+    height: 5vh;
+    margin-bottom: 1vh;
+}
+
+textarea {
+    margin-bottom: 0.5vh;
+}
+
+#submit {
+    width: 60.5vw;
+    margin: 0;
+    padding: 0;
+}
+
+form textarea {
+    width: 60vw;
+    height: 25vh;
 }
