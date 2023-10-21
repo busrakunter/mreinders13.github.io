@@ -17,12 +17,7 @@
         h1 {
             font-family: 'Bangers';
             font-size: 10vw;
-        }
-        #navigation {
-            padding: 20px;
-        }
-        button #navigation {
-            color: #12277F;
+            margin-bottom: 0;
         }
         #email, textarea, #submit {
             color: #12277F;
@@ -32,16 +27,27 @@
             font-size: 5vh;
             margin-bottom: 5vh;
         }
-        #privacy {
-            background-color: #12277F;
+        .navItem {
+            color: #fff;
+            opacity: 0.75;
+            font-family: 'Bangers';
+            font-size: 2.5vh;
+            padding: 0;
+            margin: 0;
+            align-self: flex-end;
+        }
+        .navSelection  {
+            color: #fff;
+            opacity: 1.0;
             font-family: 'Bangers';
             font-size: 5vh;
-        }
-        #privacy p:hover {
-            color:aqua;
+            float: left;
+            padding: 0;
+            margin: 0;
         }
         #policy {
             width: 60vw;
+            height: 50vh;
             margin: 0 20vw;
             overflow-x: hidden;
             overflow-y: auto;
@@ -50,21 +56,52 @@
         #policy a {
             color:aqua;
         }
+        #support {
+            display: none;
+        }
+        .nav {
+            width: 60vw;
+            margin: 5vh 20vw;
+            display: flex;
+            justify-content: space-between;
+        }
     </style>
     <script>
-        function togglePolicy() {
-            var x = document.getElementById('policy');
-            if (x.style.display === 'none') {
-                x.style.display = 'block';
+        function toggleContent() {
+            var policy = document.getElementById('policy');
+            var support = document.getElementById('support');
+            
+            if (policy.style.display === 'none') {
+                policy.style.display = 'inline-block';
+                support.style.display = 'none';
+                toggleNav()
             } else {
-                x.style.display = 'none';
+                support.style.display = 'inline-block';
+                policy.style.display = 'none';
+                toggleNav()
+            }
+        }
+        function toggleNav() {
+            var privacy = document.getElementById('privacy');
+            var help = document.getElementById('help');
+
+            if (privacy.className === "navSelection") {
+                privacy.classList.replace("navSelection", "navItem");
+                help.classList.replace("navItem", "navSelection");
+            } else {
+                privacy.classList.replace("navItem", "navSelection");
+                help.classList.replace("navSelection", "navItem");
             }
         }
     </script>
 </head>
 <body>
     <h1>Coach's Challenge</h1>
-    <form action="https://submit-form.com/Y8VTLnWR">
+    <div class="nav">
+        <h2 class="navSelection" id="privacy" onclick="toggleContent()" style="float:left;">Privacy Policy</h2>
+        <h2 class="navItem" id="help" onclick="toggleContent()" style="float:right;">Contact Us</h2>
+    </div>
+    <form id="support" action="https://submit-form.com/Y8VTLnWR">
         <input type="email" id="email" name="email" placeholder="Email Address" required="" /><br>
         <textarea
           id="message"
@@ -75,9 +112,6 @@
         <br>
         <button id="submit" type="submit">Submit</button>
     </form>
-
-    <div id="privacy" onclick="togglePolicy()"><p>Privacy Policy</p></div>
-
     <div id="policy">
         <h3>COLLECTION OF YOUR INFORMATION</h3>
         <p>We may collect your information in two ways. (1) Voluntary information - We may collect personal information using on-screen prompts or text fields  including your Email Address, First Name, and Last Name. (2) Data Collected Automatically - We may use our SDK, Cookies and other similar tracking technologies to gather information automatically, such as your Advertising ID, IP address, etc.</p>
@@ -97,6 +131,5 @@
         <p>Google may use the information it obtains via third party cookies, web beacons, and other technologies used in connection with AdMob and AdSense in accordance with its advertising Privacy Policies. You can visit these third party websites to opt out of cookies for interest based advertising or opt out by visiting <a href="www.aboutcookies.org" target="_blank">www.aboutcookies.org.</a></p>
         <a href="https://policies.google.com/technologies/ads?hl=en-US" target="_blank">View AdMobs Privacy Policy</a>
     </div>
-      
 </body>
 </html>
